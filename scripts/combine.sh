@@ -3,11 +3,11 @@ IFS=$'\t\n'
 
 if [ $# -ne 3 ]
 then
-    	echo "Usage: combine.sh [results file] [original file] [output file]"
-		echo ""
-		echo "If cracking multiple sets, you can use the pot file as the results file"
-    echo "if you have a large pot file, this may take a LONG time to run, so the"
-    echo "recommendation is to always use output files unique for each assessment."
+	echo "Usage: combine.sh [results file] [original file] [output file]"
+	echo ""
+	echo "If cracking multiple sets, you can use the pot file as the results file"
+    	echo "if you have a large pot file, this may take a LONG time to run, so the"
+    	echo "recommendation is to always use output files unique for each assessment."
 	exit -1
 fi
 
