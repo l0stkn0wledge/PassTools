@@ -13,8 +13,8 @@ fi
 
 # Create the array of hashes and the found passwords
 # The sed in PASSES should make those safe for search later
-HASHES=($(cut -d':' -f1 $1))
-PASSES=($(cut -d':' -f2 $1 |  sed -e 's/[\/&\s]/\\&/g'))
+HASHES=($(cut -d':' -f1 $1 | sed -e 's/[\/&\s]/\\&/g'))
+PASSES=($(cut -d':' -f2 $1 | sed -e 's/[\/&\s]/\\&/g'))
 
 # Generate the output file as a copy of the original
 # search for the found hashes and only copy out the
@@ -28,7 +28,6 @@ LEN=${#HASHES[@]}
 # may have the same weak passwords.
 for (( i=0 ; i < $LEN; i++ )); do
 	printf "\r $i of $LEN"
-#	SAFE_PASS=$(printf '%s\n' "${PASSES[i]}" |s sed -e 's/[\/&\s]/\\&/g')
 	sed -i "s/${HASHES[$i]}/${PASSES[i]}/g" $3
 done
 
