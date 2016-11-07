@@ -28,7 +28,7 @@ LENPLUS12=$(grep -c -E "^.{13,}$" $TMPFILENAME)
 printf "%20s%20d\n" "13+" $LENPLUS12
 
 PASSCOUNT=$(grep -c -i -E "p[a@4][zs$5]{1,2}w[o0]rd" $TMPFILENAME)
-SEASONCOUNT=$(grep -c -i -E "f[a4@][\|!]|[@4a]utumn|[zs5$]pr[i!|]ng|[zs5$]umm[3e]r|w[i!|]nt[3e]r" $TMPFILENAME)
+SEASONCOUNT=$(grep -c -i -E "f[a4@][\|!l1]|[@4a]utumn|[zs5$]pr[i!|1l]ng|[zs5$]umm[3e]r|w[i!|1l]nt[3e]r" $TMPFILENAME)
 SECRETCOUNT=$(grep -c -i -E "[zs5$][e3][c\(]r[e3][t\+]" $TMPFILENAME)
 printf "\n%35s\n" "Standard Word Analysis"
 printf "%20s%20s\n" "Word" "Count"
