@@ -30,13 +30,14 @@ printf "%20s%20d\n" "13+" $LENPLUS12
 PASSCOUNT=$(grep -c -i -E "p[a@4][zs$5]{1,2}w[o0]rd" $TMPFILENAME)
 SEASONCOUNT=$(grep -c -i -E "f[a4@][\|!l1]|[@4a]utumn|[zs5$]pr[i!|1l]ng|[zs5$]umm[3e]r|w[i!|1l]nt[3e]r" $TMPFILENAME)
 SECRETCOUNT=$(grep -c -i -E "[zs5$][e3][c\(]r[e3][t\+]" $TMPFILENAME)
+MONTHCOUNT=$(grep -c -i -E "January|February|March|April|May|June|July|August|September|October|November|December" $TMPFILENAME)
 printf "\n%35s\n" "Standard Word Analysis"
 printf "%20s%20s\n" "Word" "Count"
 printf "%40s\n" "==============================="
 printf "%20s%20d\n" "Password" $PASSCOUNT
 printf "%20s%20d\n" "Secret" $SECRETCOUNT
 printf "%20s%20d\n" "Seasons" $SEASONCOUNT
-
+printf "%20s%20d\n" "Months" $MONTHCOUNT
 
 if [ $# -eq 2 ]
 then
