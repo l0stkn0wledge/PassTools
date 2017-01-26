@@ -15,3 +15,7 @@ A series of lists I created from various sources.
 - musical-artists.list list of mostly rock and pop type artists and groups
 
 - musical-artists-nospaces.list same as above without the spaces
+
+- song-titles.list.gz compressed text file containing a listing of rock/pop related songs
+
+- song-titles-nospaces.list.gz same as above without the spaces
