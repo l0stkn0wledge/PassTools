@@ -42,7 +42,7 @@ then
 	exit -1
 fi
 
-TMPFILENAME=$(mktemp.exe)
+TMPFILENAME=$(mktemp)
 cut -d':' -f2 $1 > $TMPFILENAME
 
 printf "\n%35s\n" "Password Length Analysis"
